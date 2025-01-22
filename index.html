@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STAY GOLD FARMS</title>
+    <style>
+        /* Basic CSS - Customize further */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: black;
+            color: gold;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        .container {
+            margin-left: 200px; /* Adjust for nav width */
+            padding: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: gold;
+        }
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .container {
+                margin-left: 0;
+            }
+            header {
+                padding: 10px;
+            }
+            nav ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            nav ul li {
+                margin: 0;
+            }
+        }
+    </style>
+    <meta name="description" content="Welcome to Stay Gold Farms. We grow sustainable produce, raise happy animals, and offer fresh, local food.">
+    <meta name="keywords" content="farm, sustainability, local produce, pasture-raised chickens, organic vegetables">
+    <meta name="author" content="Stay Gold Farms">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1><img src="images/farm_logo.png" alt="STAY GOLD FARMS Logo"></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#chickens">Chickens</a></li>
+            <li><a href="#goats">Goats</a></li>
+            <li><a href="#vegetables">Vegetables</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="chickens">
+            <h2>Chickens</h2>
+            <p>...</p>
+            <img src="images/chickens/chicken1.jpg" alt="Happy Chicken">
+        </section>
+        <section id="goats">
+            <h2>Goats</h2>
+            <p>...</p>
+            <img src="images/goats/goat2.png" alt="Friendly Goat">
+        </section>
+        <section id="vegetables">
+            <h2>Vegetables</h2>
+            <p>...</p>
+            <img src="images/vegetables/carrots.jpg" alt="Fresh Carrots">
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>...</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>...</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
